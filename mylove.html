@@ -1,0 +1,254 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>~~~ Missing you... ~~~</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style> 
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+	background: url("https://hedieuhanh.com/wp-content/uploads/2019/05/hinh-cute-lam-nen-cho-may-tinh-dep_115831053.jpg") center center fixed no-repeat transparent;
+	background-size: cover;
+}
+@media(max-width:992px) {
+	width: min-content;
+}
+#texttyping{
+    width: 500px;
+    margin: 20px 10px 20px 100px;
+    font-weight: bold;
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    float: left;
+}
+#marquee{
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    top: 50px;
+    left: 650px;
+    z-index: 10;
+    float: left;
+}
+</style>
+<script language="javascript"> 
+mensaje= 
+ 
+'<font size="2" face="Courier New" color="#2B65EC">Anh yêu  Em... mãi mãi...<br></font>'+' <br>'+ 
+ 
+'<font color="#009933" size="2">Có những điều thật giản dị và dễ hiểu nhưng đôi khi trong cuộc sống, chúng ta lại phải mất cả một cuộc đời trải nghiệm mới nhận ra nó. Anh cứ  ngỡ mình đã yêu Em vì  mái tóc dài, ánh mắt dịu hiền, hay nụ cười hồn nhiên.</font>                <br>           '+
+ 
+'<br>           '+
+ 
+'<font size="2"  color="#FF6633">Rồi thời gian trôi, có lúc anh lại thấy mình yêu Em vì trái tim Em nhân hậu, giọng nói dịu dàng ... Anh đã ấp ủ trong lòng và cố gắng suy nghĩ thật nhiều để có thể nói cho Em biết  về những điều khiến Anh yêu Em.</font><br>'+
+ 
+'                    <br>'+
+ 
+'<font size="2" color="#ff3333">....và rồi ... anh ngồi đếm từng điều một ... 1...2...3... rồi  4...5...6.... bỗng anh thấy mình thật ngốc, bởi con số đó với anh sẽ là bất tận, anh yêu Em vì quá nhiều lý do, cuối cùng thì...5...4...3...2… anh nhận ra rằng anh có thể yêu Em vì bất cứ điều gì với lý do thật đơn giản …<br>"BỞI VÌ ANH YÊU Em…". Có lẽ nến, mưa, thảo nguyên và cả những dấu "..." sẽ mãi tồn tại và sống mãi <br>trong cuộc đời của anh! </font>  <br> <br>           '+
+ 
+'  <font size="2" color="#669933">  Vì trái tim anh đã thuộc về Em... dẫu không thể nói hết được, nhưng<br> anh vẫn muốn làm tặng Em trang web này!</font>'+
+'                    <br>'+
+'<br><font color="#669933">( </font><font color="#ff3333">Because</font> <font color="#333399">I</font> <font color="#ff00ff">L♥ve</font> <font color="#333333">You</font> <font color="#669933">... )</font><br>'+
+'<br><p align="left"> <font face="Courier New" color="#085C12" size="3">Mãi Mãi Thương Em...</font></p>'
+ 
+line=0
+ 
+cursor='_'
+ 
+function teclear(){
+ 
+if(line==mensaje.length) cursor=''
+ 
+texttyping.innerHTML=mensaje.substring(0,line)+cursor
+ 
+if(line++<mensaje.length) setTimeout("teclear()",60) 
+ 
+}
+</script>
+<script type="text/javascript"> 
+// Set the number of snowflakes (more than 30 - 40 not recommended)
+var snowmax=12
+ 
+// Set the colors for the snow. Add as many colors as you like
+var snowcolor=new Array("#aaaacc","#ddddFF","#ccccDD","#ffffff","#ffc0cb")
+ 
+// Set the fonts, that create the snowflakes. Add as many fonts as you like
+var snowtype=new Array("Arial Black","Arial Narrow","Times","Comic Sans MS")
+ 
+// **** CHANGE YOUR IMAGE HERE ****
+ 
+// Set the letter that creates your snowflake (recommended: * )
+var snowletter=" <img src=http://lh6.googleusercontent.com/-7-WYEBOVd7c/TzMiej4AFcI/AAAAAAAACLc/w2Fn6N9jwIU/s32/heart.png> "
+ 
+// Set the speed of sinking (recommended values range from 0.3 to 2)
+var sinkspeed=0.6
+ 
+// Set the maximal-size of your snowflaxes
+var snowmaxsize=40
+ 
+// Set the minimal-size of your snowflaxes
+var snowminsize=20
+ 
+// Set the snowing-zone
+// Set 1 for all-over-snowing, set 2 for left-side-snowing
+// Set 3 for center-snowing, set 4 for right-side-snowing
+var snowingzone=1
+ 
+///////////////////////////////////////////////////////////////////////////
+// CONFIGURATION ENDS HERE
+///////////////////////////////////////////////////////////////////////////
+ 
+ 
+// Do not edit below this line
+var snow=new Array()
+var marginbottom
+var marginright
+var timer
+var i_snow=0
+var x_mv=new Array();
+var crds=new Array();
+var lftrght=new Array();
+var browserinfos=navigator.userAgent
+var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
+var ns6=document.getElementById&&!document.all
+var opera=browserinfos.match(/Opera/)
+var browserok=ie5||ns6||opera
+ 
+function randommaker(range) {
+	rand=Math.floor(range*Math.random())
+    return rand
+}
+ 
+function initsnow() {
+    teclear();
+	if (ie5 || opera) {
+      marginbottom = document.body.clientHeight
+      marginright = document.body.clientWidth
+   }
+   else if (ns6) {
+      marginbottom = window.innerHeight
+      marginright = window.innerWidth
+   }
+	var snowsizerange=snowmaxsize-snowminsize
+	for (i=0;i<=snowmax;i++) {
+		crds[i] = 0;
+    	lftrght[i] = Math.random()*15;
+    	x_mv[i] = 0.03 + Math.random()/10;
+		snow[i]=document.getElementById("s"+i)
+		snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
+		snow[i].size=randommaker(snowsizerange)+snowminsize
+		snow[i].style.fontSize=snow[i].size
+		snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
+		snow[i].sink=sinkspeed*snow[i].size/5
+		if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+		if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+		if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+		if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+		snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
+		snow[i].style.left=snow[i].posx
+		snow[i].style.top=snow[i].posy
+	}
+	movesnow()
+}
+ 
+function movesnow() {
+	for (i=0;i<=snowmax;i++) {
+		crds[i] += x_mv[i];
+		snow[i].posy+=snow[i].sink
+		snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i]);
+		snow[i].style.top=snow[i].posy
+ 
+		if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
+			if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+			if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+			if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+			if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+			snow[i].posy=0
+		}
+	}
+	var timer=setTimeout("movesnow()",60)
+}
+ 
+for (i=0;i<=snowmax;i++) {
+	document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
+}
+if (browserok) {
+	window.onload=initsnow;
+ 
+}
+</script>
+</head>
+<body >
+ 
+<div><embed src="http://www.nhaccuatui.com/l/OjgBDy1A-ocm" allowfullscreen="true" allowscriptaccess="always" flashvars="&file=http://www.nhaccuatui.com/l/OjgBDy1A-ocm&displayheight=13&backcolor=0xe9f0f3&frontcolor=&lightcolor=&showdigits=true&showeq=true&showfsbutton=true&autostart=true&shuffle=false&repeat=true;volume=60;height=1 ;width=0px;height=0" width="0" height="0" /></div>
+<div id="marquee">
+<marquee onmouseover="this.stop()" onmouseout="this.start()" scrollAmount="1" scrollDelay="60" direction="up">
+<font color="#FF0099" size="2" face="tahoma"><b>
+______Gửi xã Em Yêu Dấu!!!<br/><br/><br/>
+Em là tình yêu của cuộc đời anh<br/>
+một tình yêu anh không bao giờ nghĩ rằng sẽ đến<br/>
+ 
+để rồi anh biết rằng sẽ không bao giờ rời xa<br/>
+Một thoáng vô tình để mắt anh..... <br/>
+chạm vào đôi mắt biết cười của Em.<br/>
+<br>
+Đã bao nhiêu thời gian trôi qua<br/>
+kí ức anh vẫn vẹn nguyên hình ảnh ấy<br/>
+để mỗi lần nhớ tới......<br/>
+trái tim anh như nghẹt thở....<br/>
+sững sờ trước hạnh phúc lớn của cuộc đời mình.<br/>
+ 
+<br/>
+Anh thầm cảm ơn cuộc đời đã đưa Em đến bên anh<br/>
+một người bạn tốt như Em, ân cần như Em.<br/>
+<br/>
+Đã bao lần anh bối rối khi bỗng ngước nhìn Em<br/>
+và nhận ra những xao động đang dâng trào<br/>
+những khoảnh khắc tĩnh lặng...<br/>
+mà nói nhiều hơn bất cứ những gì của ngôn từ<br/>
+<br/>
+Chúng ta sống trên đời này không phải để tìm thấy một người hoàn mỹ để yêu thương 
+mà là học cách yêu thương người không hoàn mỹ một cách trọn vẹn.
+<br/><br/></b></font>
+ 
+<font color="#B000C5" size="2" face="verdana"><b><i>
+Có những điều anh không thể làm theo suy nghĩ của mình<br/>
+Một lời chia tay thật sự không thể thốt lên<br/>
+Vì anh biết, chưa bao giờ anh chuẩn bị nói lên điều đó<br/>
+<br>
+<p align="center">Có đôi khi bất chợt<br/>
+Trái tim muốn nhảy tung khỏi lồng ngực<br/>
+Như gắn chặt vào lòng bàn tay<br/>
+Tự do mà nhảy múa <br/>
+Để biết rằng, tim hãy còn chung nhịp đập <br/>
+ 
+Và anh mãi còn yêu Em hơn cả những gì hoang dại của gió...!<br/></p>
+<br/>
+<p align="right">Điều kì diệu và tuyệt vời nhất       <br/>
+Là thẳm sâu nơi tâm hồn       <br/>
+Vẫn còn một sự ngọt ngào đến mãnh liệt       <br/>
+Vẫn còn một vị đắng pha lẫn hơi men nồng       <br/>
+Giữa bóng tối và ánh sáng       <br/>
+Sự chia cắt luôn luôn hiện hữu       <br/>
+Thì một tình yêu hãy còn vĩ đại       <br/>
+ 
+Vẫn đủ sức nảy nở đâm chồi        <br>
+Cứ thế mà bay lên trong sự thăng hoa viên mãn       <br>
+</p><br/></b></i></font>
+<font color="#0042FF" size="2" face="verdana"><b><i>
+Đối với thế giới này, Em là một ai đó. <br>
+Nhưng đối với một ai đó, Em là cả thế giới này.<br>
+<br/></b></i>
+<font color="FF0000" size="4" face="verdana"><b>
+Mãi yêu Em!<br />
+<p align="center">Anh!!!</p>
+</b>
+</marquee>
+</div>
+<div id="texttyping">
+</div>
+</body>
+</html>
